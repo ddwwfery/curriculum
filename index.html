@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>curriculum</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #111;
+    }
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+    img#autoImg {
+      max-width: 100%;
+      max-height: 100vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <img id="autoImg" src="03E4AFA7-3D27-4236-9E6D-D023415DA196.jpeg" alt="圖片顯示">
+  </div>
+
+  <script>
+    const img = document.getElementById('autoImg');
+    img.addEventListener('error', () => {
+      document.body.innerHTML = '<div style="color:#fff;display:flex;height:100vh;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;padding:20px;text-align:center;">找不到圖片：<br><strong>03E4AFA7-3D27-4236-9E6D-D023415DA196.jpeg</strong><br>請確認與此 HTML 在同一資料夾。</div>';
+    });
+  </script>
+</body>
+</html>
